@@ -1,7 +1,7 @@
 from telegram import InlineQueryResultVoice, InlineQuery, Update
 from telegram.ext import Application, InlineQueryHandler, ContextTypes
 
-BOT_TOKEN = '6964802840:AAFM2Km9WmY8htFVGhheQzUmwltRrZsFB-k'
+BOT_TOKEN = 'BOT_TOKEN'
 
 async def inline_query_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     query = update.inline_query.query
@@ -14,7 +14,7 @@ async def inline_query_handler(update: Update, context: ContextTypes.DEFAULT_TYP
         ),
         InlineQueryResultVoice(
             id='2',
-            voice_url='http://example.com/your_voice_message2.ogg',
+            voice_url='https://github.com/okuzan/tg-voice-bot/blob/main/voices/pillow_scream.ogg',
             title='Pillow scream'
         )
     ]
