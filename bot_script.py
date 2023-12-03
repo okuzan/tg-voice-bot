@@ -9,12 +9,12 @@ async def inline_query_handler(update: Update, context: ContextTypes.DEFAULT_TYP
     results = [
         InlineQueryResultVoice(
             id='1',
-            voice_url='https://github.com/okuzan/tg-voice-bot/blob/main/voices/IDGAF.ogg',
+            voice_url='https://raw.githubusercontent.com/okuzan/tg-voice-bot/main/voices/IDGAF.ogg',
             title='Похуй максимально'
         ),
         InlineQueryResultVoice(
             id='2',
-            voice_url='https://github.com/okuzan/tg-voice-bot/blob/main/voices/pillow_scream.ogg',
+            voice_url='https://raw.githubusercontent.com/okuzan/tg-voice-bot/main/voices/pillow_scream.ogg',
             title='Pillow scream'
         )
     ]
