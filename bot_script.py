@@ -30,7 +30,13 @@ async def handle_inline_query(update: Update, context: ContextTypes.DEFAULT_TYPE
             id='5',
             voice_url='https://raw.githubusercontent.com/okuzan/tg-voice-bot/main/voices/dead_inside.ogg',
             title='Dead inside'
+        ),
+        InlineQueryResultVoice(
+            id='6',
+            voice_url='https://raw.githubusercontent.com/okuzan/tg-voice-bot/main/voices/wtf.ogg',
+            title='Что за хуйня'
         )
+
     ]
     await update.inline_query.answer(results)
 def main() -> None:
