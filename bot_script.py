@@ -3,9 +3,8 @@ from telegram.ext import Application, InlineQueryHandler, ContextTypes
 
 BOT_TOKEN = 'BOT_TOKEN'
 
-async def inline_query_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+async def handle_inline_query(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     query = update.inline_query.query
-
     results = [
         InlineQueryResultVoice(
             id='1',
@@ -16,11 +15,14 @@ async def inline_query_handler(update: Update, context: ContextTypes.DEFAULT_TYP
             id='2',
             voice_url='https://raw.githubusercontent.com/okuzan/tg-voice-bot/main/voices/pillow_scream.ogg',
             title='Pillow scream'
+        ),
+        InlineQueryResultVoice(
+            id='3',
+            voice_url='https://raw.githubusercontent.com/okuzan/tg-voice-bot/main/voices/yebaat.ogg',
+            title='Єбаать'
         )
     ]
-
     await update.inline_query.answer(results)
-
 def main() -> None:
     application = Application.builder().token(BOT_TOKEN).build()
 
