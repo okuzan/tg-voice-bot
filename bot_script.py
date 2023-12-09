@@ -24,28 +24,33 @@ async def handle_inline_query(update: Update, context: ContextTypes.DEFAULT_TYPE
         InlineQueryResultVoice(
             id='4',
             voice_url='https://raw.githubusercontent.com/okuzan/tg-voice-bot/main/voices/i_dont_sleep.ogg',
-            title='Блять я не сплю'
+            title='Блять я не сплююю'
         ),
         InlineQueryResultVoice(
             id='5',
             voice_url='https://raw.githubusercontent.com/okuzan/tg-voice-bot/main/voices/dead_inside.ogg',
-            title='Dead inside'
+            title='I\'m dead inside'
         ),
         InlineQueryResultVoice(
             id='6',
             voice_url='https://raw.githubusercontent.com/okuzan/tg-voice-bot/main/voices/wtf.ogg',
-            title='Что за хуйня'
+            title='Что это за хуйня блять'
         ),
         InlineQueryResultVoice(
             id='7',
             voice_url='https://raw.githubusercontent.com/okuzan/tg-voice-bot/main/voices/fuck_it.ogg',
-            title='Забити хуй'
+            title='Може забити хуй..'
         ),
         InlineQueryResultVoice(
             id='8',
             voice_url='https://raw.githubusercontent.com/okuzan/tg-voice-bot/main/voices/argh.ogg',
             title='ААА'
-        )
+        ),
+        InlineQueryResultVoice(
+            id='9',
+            voice_url='https://raw.githubusercontent.com/okuzan/tg-voice-bot/main/voices/prank.ogg',
+            title='Це був пранк'
+        )        
     ]
     await update.inline_query.answer(results)
 def main() -> None:
