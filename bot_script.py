@@ -1,4 +1,4 @@
-from telegram import InlineQueryResultVoice, InlineQuery, Update
+from telegram import InlineQueryResultVoice, Update
 from telegram.ext import Application, InlineQueryHandler, ContextTypes
 
 BOT_TOKEN = 'BOT_TOKEN'
@@ -50,13 +50,19 @@ async def handle_inline_query(update: Update, context: ContextTypes.DEFAULT_TYPE
             id='9',
             voice_url='https://raw.githubusercontent.com/okuzan/tg-voice-bot/main/voices/prank.ogg',
             title='Це був пранк'
-        )        
+        ),
+        InlineQueryResultVoice(
+            id='10',
+            voice_url='https://raw.githubusercontent.com/okuzan/tg-voice-bot/main/voices/language.ogg',
+            title='Державною or else..'
+        )          
     ]
     await update.inline_query.answer(results)
+
 def main() -> None:
     application = Application.builder().token(BOT_TOKEN).build()
 
-    inline_query_handler = InlineQueryHandler(inline_query_handler)
+    inline_query_handler = InlineQueryHandler(handle_inline_query)
     application.add_handler(inline_query_handler)
 
     application.run_polling()
