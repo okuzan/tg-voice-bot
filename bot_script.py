@@ -55,6 +55,11 @@ async def handle_inline_query(update: Update, context: ContextTypes.DEFAULT_TYPE
             id='10',
             voice_url='https://raw.githubusercontent.com/okuzan/tg-voice-bot/main/voices/language.ogg',
             title='Державною or else..'
+        ),
+        InlineQueryResultVoice(
+            id='11',
+            voice_url='https://raw.githubusercontent.com/okuzan/tg-voice-bot/main/voices/stop.ogg',
+            title='Перестань писать!'
         )          
     ]
     await update.inline_query.answer(results)
