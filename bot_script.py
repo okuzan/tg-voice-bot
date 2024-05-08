@@ -1,7 +1,11 @@
 from telegram import InlineQueryResultVoice, Update
 from telegram.ext import Application, InlineQueryHandler, ContextTypes
+from dotenv import load_dotenv
+import os
 
-BOT_TOKEN = 'BOT_TOKEN'
+load_dotenv()
+
+BOT_TOKEN = os.getenv('BOT_TOKEN')
 
 async def handle_inline_query(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     query = update.inline_query.query
