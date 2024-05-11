@@ -11,6 +11,7 @@ On Unix or MacOS:
 
 Install Dependencies:
 `pip install python-telegram-bot`
+`pip install python-dotenv`
 
 Run:
 `python bot_script.py`
